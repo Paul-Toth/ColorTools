@@ -5,7 +5,7 @@ import numpy as np
 def interpolate_colors(color_start, color_end, n):
     colors = []
     for i in range(n):
-        fraction = i / float( n-1 )
+        fraction = i / float(n - 1)
         colors.append([
             int(color_start[j] + (color_end[j] - color_start[j]) * fraction)
             for j in range(3)
@@ -20,7 +20,8 @@ def rgb_to_hex(rgb):
 
 def hex_to_rgb(hex_in):
     # Convert Hexadecimal color to RGB format
-    return tuple(int(hex_in[i:i+2], 16)  for i in (0, 2, 4))
+    hex_in = hex_in.strip("#")
+    return tuple(int(hex_in[i:i + 2], 16) for i in (0, 2, 4))
 
 
 def trim_cmap(colormap, cmin=0.20, cmax=1.00):
