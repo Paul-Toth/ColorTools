@@ -3,13 +3,19 @@ import numpy as np
 
 
 def interpolate_colors(color_start, color_end, n):
+    if (type(color_start) == str) or (type(color_end) == str):
+        color_start = hex_to_rgb(mpl.colors.cnames[color_start])
+        color_end = hex_to_rgb(mpl.colors.cnames[color_end])
+    print("color_start", color_start)
+    print("color_end", color_end)
+
     colors = []
     for i in range(n):
         fraction = i / float(n - 1)
-        colors.append([
+        colors.append(rgb_to_hex([
             int(color_start[j] + (color_end[j] - color_start[j]) * fraction)
             for j in range(3)
-        ])
+        ]))
     return colors
 
 
