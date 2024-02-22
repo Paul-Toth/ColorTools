@@ -4,8 +4,14 @@ import numpy as np
 
 def interpolate_colors(color_start, color_end, n):
     if (type(color_start) == str) or (type(color_end) == str):
-        color_start = hex_to_rgb(mpl.colors.cnames[color_start])
-        color_end = hex_to_rgb(mpl.colors.cnames[color_end])
+        if color_start in mpl.colors.cnames.keys():
+            color_start = hex_to_rgb(mpl.colors.cnames[color_start])
+        else:
+            color_start = hex_to_rgb(color_start)
+        if color_end in mpl.colors.cnames.keys():
+            color_end = hex_to_rgb(mpl.colors.cnames[color_end])
+        else:
+            color_end = hex_to_rgb(color_end)
     print("color_start", color_start)
     print("color_end", color_end)
 
