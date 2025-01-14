@@ -1,6 +1,6 @@
 # ColorTools
 
-A personal project to simplify the way I work with custom colors and colormaps in Matplotlib.
+A personal project to simplify the way I work with custom colors and colormaps in Matplotlib. 
 
 ## Features
 
@@ -8,15 +8,26 @@ A personal project to simplify the way I work with custom colors and colormaps i
 - **Color Conversion**: Switch between hex and RGB color formats.
 - **Trim Colormaps**: Create custom colormaps by limiting their color range.
 
+Note: All of this functionality exists in matplotlib. For example:
+- **Convert Format**: [matplotlib.colors.to_hex()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.to_hex.html)
+                  [matplotlib.colors.to_hex()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.to_hex.html)
+- **Interpolate**: [LinearSegmentedColormap.from_list()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html#matplotlib.colors.LinearSegmentedColormap)
+
 ## Installation
 
 Just copy `ColorTools.py` into your project directory and import it.
 
-### Alternatively, use a relative import if you have it in a package
+Alternatively, use a relative import if you have it in a package
+
+
+## Usage Examples
+
+##### Import
 ```python
 from ColorTools import interpolate_colors, rgb_to_hex, hex_to_rgb, trim_cmap
 ```
 
+##### Interpolation
 ```python
 from ColorTools import interpolate_colors
 
@@ -26,6 +37,7 @@ print(colors)
 # Output: ['#ff0000', '#bf003f', '#80007f', '#4000bf', '#0000ff']
 ```
 
+##### Convert Formats
 ```python
 from ColorTools import hex_to_rgb, rgb_to_hex
 
@@ -39,6 +51,7 @@ print(hex_color)  # Output: '#1e90ff'
 
 ```
 
+##### Trim Colormaps
 ```python
 from ColorTools import trim_cmap
 import matplotlib.pyplot as plt
