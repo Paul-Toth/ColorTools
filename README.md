@@ -10,7 +10,6 @@ A personal project to simplify the way I work with custom colors and colormaps i
 
 Note: All of this functionality exists in matplotlib. For example:
 - **Convert Format**: [matplotlib.colors.to_hex()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.to_hex.html)
-                  [matplotlib.colors.to_hex()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.to_hex.html)
 - **Interpolate**: [LinearSegmentedColormap.from_list()](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html#matplotlib.colors.LinearSegmentedColormap)
 
 ## Installation
